@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <style>
+     
+    a.styled {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+      }
+        
+      a.styled:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+      }
+        
+      a.styled:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a.styled:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      </style>
+  </head>
+
+  <body>
+    <h1 id="ancored">Title ancored</h1>
+
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools! Blank page</a>
+    <a href="https://www.w3schools.com/" target="_self">Visit W3Schools! Self page</a>
+    <a href="https://www.w3schools.com/" target="_parent">Visit W3Schools! Parent page</a>
+    <a href="https://www.w3schools.com/" target="_top">Visit W3Schools! Top page</a>
+    <br>
+
+    <a href="https://w3schools.com">Link to another page.</a>
+    <br>
+
+    <a href="./1_introduction.html">Link using relative path.</a>
+    <br>
+
+    <a href="1_introduction.html">Link to file in same directory.</a>
+    <br>
+
+    <a><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+    <br>
+
+    <a href="mailto:caue.guedes91@gmail.com">Send email</a>
+    <br>
+
+    <button onclick="document.location='1_introduction.html'">Link Inside Button</button>
+    <br>
+
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    <br>
+
+    <a class="styled" href="">Link with active, visited, hover and link</a>
+    <br>
+
+    <div style="height: 1000px;"></div>
+    <a href="#ancored">Link Ancored</a>
+  </body>
+</html>
