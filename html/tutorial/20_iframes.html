@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>
+      Iframes
+    </title>
+    <style>
+      iframe {
+        display: block;
+      }
+
+      h3 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Iframe example</h3>
+    <iframe src="01_introduction.html" title="iframe example"></iframe>
+
+    <h3>Iframe example</h3>
+    <iframe src="02_basic.html"  style="height:200px;width:300px;" title="Iframe Example"></iframe>
+
+
+    <h3>Iframe borderless</h3>
+    <iframe src="03_elements.html"  style="border:none;" title="Iframe Example"></iframe>
+  
+    <h3>Targer for a link</h3>
+
+    <iframe src="01_introduction.html" name="iframe_a" title="Iframe Example"></iframe>
+    <p><a href="www.google.com" target="iframe_a">w3schools</a></p>
+  </body>
+</html>

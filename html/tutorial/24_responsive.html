@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Basic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../images/">
+    <style>
+      .left {
+        background-color: #2196F3;
+        padding: 20px;
+        float: left;
+        width: 20%;
+      }
+      .main {
+        background-color: #f1f1f1;
+        padding: 20px;
+        float: left;
+        width: 60%;
+      }
+      .right {
+        background-color: #4CAF50;
+        padding: 20px;
+        float: left;
+        width: 20%;
+      }
+
+      @media screen and (max-width:800px){
+        .left, .main, .right {
+          width: 100%;
+        }  
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h2>Media Queries</h2>
+    <p>Resize the browser window.</p>
+
+    <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+    <div class="left">
+      <p>Left Menu</p>
+    </div>
+    <div class="main">
+      <p>Main Content</p>
+    </div>
+    <div class="right">
+      <p>Right Content</p>
+    </div>
+
+    <img src="img_girl.jpg" style="max-width:100%;height:auto;">
+
+    <picture>
+      <source srcset="img_girl.jpg" media="(max-width: 600px)">
+      <source srcset="img_chania.jpg" media="(max-width: 1500px)">
+      <source srcset="pic_trulli.jpg">
+      <img src="w3schools.jpg" alt="Flowers">
+    </picture>
+
+    <h1 style="font-size: 10vw;">Hello World!</h1>
+  </body>
+</html>

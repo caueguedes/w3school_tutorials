@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Classes</title>
+    <style>
+      .city {
+        background-color: tomato;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      .note {
+        font-size: 120%;
+        color:red;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="city">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+
+    <div class="city">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <h1>My <span class="note">Important</span> Heading</h1>
+    <p>This is some <span class="note">important</span> text.</p>
+
+
+
+    <h2 class="city">Paris</h2>
+    <p class="city">Paris is the capital of France</p>
+
+    <button onclick="myFunction()">Hide Content</button>
+
+  </body>
+</html>
