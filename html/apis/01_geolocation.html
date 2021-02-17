@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Geolocation</title>
+
+  </head>
+
+  <body>
+    
+    <p>Click on the button to get your current location.</p>
+
+    <button onclick="getLocation()">Get Location</button>
+    
+    <p id="demo">
+    <div id="mapholder">
+
+    <h3>getCurrentPosition() - Return data</h3>
+    <ul>
+      <li>coords.latitude	</li>
+      <li>coords.longitude	</li>
+      <li>coords.accuracy	</li>
+      <li>coords.altitude	</li>
+      <li>coords.altitudeAccuracy	</li>
+      <li>coords.heading	</li>
+      <li>coords.speed	</li>
+      <li>timestamp	</li>
+    </ul>
+
+    <h3>Geolocation object</h3>
+    <h4>whatchPosition() and clearWhatch()</h4>
+    <p id="watch"></p>
+
+    <script>
+      var x = document.getElementById("demo");
+      
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+          navigator.geolocation.getCurrentPosition(showPositionOnMap);
+          navigator.geolocation.getCurrentPosition(showPositionWatch);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {  
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;
+      }
+
+
+      function showPositionOnMap(position) {  
+        var latlon = position.coords.latitude + "," + position.coords.longitude;
+        var img_url ="https://maps.googleapis.com/maps/api/staticmap?center=" +
+          latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+          document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+       }
+
+      
+      function showPositionWatch(position) {
+        document.getElementById("watch").innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

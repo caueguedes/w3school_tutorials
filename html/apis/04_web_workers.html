@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Web Workers</title>
+  </head>
+
+  <body>
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button> 
+    <button onclick="stopWorker()">Stop Worker</button>
+
+    <script>
+      importScripts('.demo_workers');
+
+      var worker;
+      
+      function startWorker() {
+        if (typeof(Worker) !== "undefined") {
+          if (typeof(worker) == "undefined") {
+            worker = new Worker('demo_workers.js');
+          }
+          worker.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+          };
+        } else {
+          document.getElementById("result").innerHTML = "Sorry! No Web Work support.";
+        }
+      }
+
+      function stopWorker() {
+        worker.terminate();
+        worker = undefined; 
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Web Storage</title>
+
+    <script>
+      function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+        } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <h1>LocalStorage object</h1>
+    <pre>
+      // Stores
+      <code>localStorage.setItem("lastname", "Smith");</code>
+
+      // Retrieve
+      <code>document.getElementById("result").innerHTML = localStorage.getItem("lastname");</code>
+    
+      // Removing
+      localStorage.removeItem("lastname");
+    </pre>
+
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+  </body>
+</html>
