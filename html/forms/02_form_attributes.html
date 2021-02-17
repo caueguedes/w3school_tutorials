@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Form Attributes</title>
+  </head>
+
+  <body>
+    <h1>The Action Attribute</h1>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <h1>Target</h1>
+    &ltform action="/action_page.php" target="_blank"&gt
+
+    <h1>Method</h1>
+    &ltform action="/action_page.php" method="get"&gt
+    &ltform action="/action_page.php" method="post"&gt
+
+    <h1>Autocomplete</h1>
+    &ltform action="/action_page.php" autocomplete="on"&gt
+
+    <h1>Novalidate</h1>
+    &ltform action="/action_page.php" novalidate&gt
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Form Elements</title>
+  </head>
+
+  <body>
+    <ol>
+      <li>&ltinput&gt</li>
+      <li>&ltlabel&gt</li>
+      <li>&ltselect&gt</li>
+      <li>&lttextarea&gt</li>
+      <li>&ltbutton&gt</li>
+      <li>&ltfieldset&gt</li>
+      <li>&ltlegend&gt</li>
+      <li>&ltdatalist&gt</li>
+      <li>&ltoutput&gt</li>
+      <li>&ltoption&gt</li>
+      <li>&ltoptgroup&gt</li>
+    </ol>    
+
+    <h1>The input Element</h1>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname">
+    </form>
+
+    <h1>The Select Element</h1>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+      <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+      </optgroup>
+      <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+    </select>
+    
+    <h3>Visible Values:</h3>
+    <p>&ltselect name="cars" size="3"&gt</p>
+
+    <h3>Selected option</h3>
+    <p>&ltoption value="fiat" selected&gtFiat&lt/option&gt</p>
+
+    <h3>Multiple Selected options</h3>
+    <p>&ltoption value="fiat" multiple size="3"&gtFiat&lt/option&gt</p>
+
+
+    <h1>Text Area</h1>
+    <textarea name="message" rows="10" cols="30">
+      The cat was playing in the garden.
+    </textarea>
+
+    <h1>The Button Element</h1>
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <h1>The Fieldset and Legend Elements</h1>
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+    <h1>The Datalist Element</h1>
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+
+    <h1>The Output Element</h1>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0<input type="range" name="a" id="a" value="50">100 +
+      <input type="number" id="b" name="b" value="50"> = 
+      <output name="x" for="a b"></output>
+      <br><br>
+      <input type="submit">
+    </form>
+
+  </body>
+</html>
