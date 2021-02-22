@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Media</title>
+    <title>Borders</title>
     <style>
-
     </style>
   </head>
 
@@ -14,8 +13,28 @@
     <p>You can mix the border styles (top right bottom left)</p>
     <p>p.mix {border-style: dotted dashed solid double;}</p>
 
+    <h3>Width</h3>
+    <p style="border-style:dashed; border-width: thick;"> dashed thick border</p>    
+    <p style="border-style:dashed; border-width: thin thick;"> border top/bottom left/right</p>    
+    <p style="border-style:dotted; border-width: 1px 2px 3px 4px;"> border top rigth bottom left</p>    
 
+    <h3>Color</h3>
+    <p style="border-style:dashed; border-color: red;"> dashed border</p>    
+    <p style="border-style:dotted; border-color: red blue green violet;"> dotted colored top right bottom left border</p>
+    <p style="border-style:dashed; border-color: rgba(255, 0, 0, 0.3);"> dashed rgba border</p>    
 
-    
+    <h3>Sides</h3>
+    <p style="border-left-style:dashed; border-color: red;"> dashed left border</p>    
+    <p style="border-bottom-style:dashed; border-color: red;"> dashed bottom border</p>    
+
+    <h3>ShortHand</h3>
+    <p style="border: 5px dashed red;"> shorthand width/style/color border</p>    
+    <p style="border: 3px dotted dodgerblue;"> shorthand width/style/color border</p>    
+    <p style="border-bottom: 3px dotted red;"> shorthand width/style/color border bottom</p>    
+
+    <h3>Rounded</h3>
+    <p style="border: 2px solid red; border-radius: 3px;"> shorthand width/style/color border</p>    
+    <p style="border: 2px solid red; border-radius: 6px;"> shorthand width/style/color border</p>    
+    <p style="border: 2px solid red; border-radius: 10px;"> shorthand width/style/color border</p>    
   </body>
 </html>
