@@ -31,9 +31,6 @@ function myFunction(value, index, array) {
   return value > 18;
 }
 
-
-
-
 // REDUCE ITERATION
 var sum = numbers1.reduce(myFunction);        // from left to rigth
 var sum = numbers1.reduceRight(myFunction);   // from rigth to left
@@ -65,7 +62,6 @@ var a = fruits.indexOf("Apple");          // 0
 var a = fruits.lastIndexOf("Apple");      // 2
 
 
-
 // FIND ITERATION
-This example finds (returns the value of) the first element that is larger than 18:
+// This example finds (returns the value of) the first element that is larger than 18:
 
