@@ -27,6 +27,52 @@
       }
       div.sticky {
         position: sticky;
+        border: 3px solid #73AD21;
+        top: 0;
+      }
+
+      div.overlaping {
+        position: relative;
+      }
+
+      div.overlaping > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.3;
+          z-index: -1;
+        }
+
+      div.container {
+        position: relative;
+    
+      }
+
+      div.container > img{
+        opacity: 0.3;
+        width: 100%;
+        height: auto;
+      }
+
+      .topLeft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      .bottomRight{
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      .center {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
@@ -62,7 +108,27 @@
     <small>The element is positioned relative to the nearest positioned ancestor and if it has no positioned ancestors, it uses the document body</small>
 
     <h3>Sticky</h3>
-    <div class="sticky"></div>
+    <div class="sticky">This div element has position:sticky</div>
+    <small>An element Sticky is positioned based on the users scroll position </small>
+    <small>It will sticky when reach the determined position</small>
+  
+  
+    <h1>Overlaping elements</h1>
 
+    <div class="overlaping">
+      <img src="../images/w3schools.jpg" >
+      <h3>z-index</h3>
+      <p>Because the image has a z-index of -1, it will be plpaced behind the text</p>
+    </div>
+
+    <h1>Positioning text in an image</h1>
+    <div class="container">
+      <img src="../images/img_5terre_wide.jpg">
+      <div class="topLeft"> top left</div>
+      <div class="bottomRight">bottom right</div>
+      <div class="center">center</div>
+    </div>
+
+    <br>
   </body>
 </html>
