@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Clear</title>
+    <style>
+      div {
+        border: 3px solid #4CAF50;
+        padding: 5px;
+      }
+
+      .clearfix {
+        overflow: auto;
+      }
+
+      .clearfixtwo::after{
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <img src="../images/pineapple.jpg" width="170" height="170" style="float: right;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, maxime aperiam, nam, dolorem quidem facere nobis labore deserunt maiores optio culpa. Dolores cupiditate molestiae numquam neque ipsum! Consequatur, quaerat nihil?
+    </div>
+
+    <p style="clear: right;">Adding an clearfix with overflow auto</p>
+
+    <div class="clearfix">
+      <img src="../images/pineapple.jpg" width="170" height="170" style="float: right;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, maxime aperiam, nam, dolorem quidem facere nobis labore deserunt maiores optio culpa. Dolores cupiditate molestiae numquam neque ipsum! Consequatur, quaerat nihil?
+    </div>
+
+    <h1>Using ::after</h1>
+    <div class="clearfixtwo">
+      <img src="../images/pineapple.jpg" width="170" height="170" style="float: right;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, maxime aperiam, nam, dolorem quidem facere nobis labore deserunt maiores optio culpa. Dolores cupiditate molestiae numquam neque ipsum! Consequatur, quaerat nihil?
+    </div>
+
+
+  </body>
+</html>
