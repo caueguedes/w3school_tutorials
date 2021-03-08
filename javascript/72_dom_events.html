@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Events</title>
+  </head>
+
+  <body>
+    <h1>Events</h1>
+    <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+    <h3 onclick="changeThis(this)" >event functions</h3>
+    <script>
+      function changeThis(id) { id.innerHTML = "Oops!"}
+    </script>
+
+    <h3>Event using HTML DOM</h3>
+    <button id="myBtn">Click me</button>
+    <p id="btn-p"></p>
+    <script>
+      function displayDate() {
+        document.getElementById('btn-p').innerText = new Date();
+      }
+
+      document.getElementById('myBtn').onclick = displayDate;
+    </script>
+
+    <h1>Onload and onUnload</h1>
+    <script>
+      function checkCookies() {
+        var text = '';
+        if (navigator.cookieEnabled == true) {
+          text = 'Cookies are enabled';
+        } else {
+          text = 'Cookies are not enable';
+        }
+        document.getElementById('onload').innerText = text;
+      }
+
+      document.body.onload = checkCookies;
+    </script>
+    <p id="onload"></p>
+
+    <h1>onChange</h1>
+    <script>
+      function myFunction() {
+        let x = document.getElementById('fname');
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+    <input type="text" id="fname" onchange="myFunction()">
+
+    <h1 id='mouseOver' onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">On mouse over/out</h1>
+    <script>
+      function onMouseOver(obj) {
+        obj.style.backgroundColor = 'Red';
+      }
+      function onMouseOut(obj) {
+        obj.style.backgroundColor = 'Blue';
+      }
+    </script>
+
+
+  </body>
+</html>

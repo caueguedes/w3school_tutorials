@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Event Listener</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <h1>Event Listener</h1>
+    <h3>Syntax</h3>
+    element.addEventListener(event, function, useCapture);
+
+    <pre>
+      element.addEventListener("mouseover", myFunction);
+      element.addEventListener("click", mySecondFunction);
+      element.addEventListener("mouseout", myThirdFunction);
+    </pre>
+
+    <h3>Passing parameters</h3>
+    element.addEventListener("click", function(){ myFunction(p1, p2); });
+
+    <h3>Removing events</h3>
+    element.removeEventListener("mousemove", myFunction);
+
+  </body>
+</html>
