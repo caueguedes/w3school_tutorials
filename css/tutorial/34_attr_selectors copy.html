@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Attribute selectors</title>
+    <style>
+      a[target] {
+        background-color: tomato;
+      }
+
+      a[target=_blank] {
+        background-color: yellow;
+      }
+
+      [title~="flower"]{
+        border: 5px solid yellow;
+      }
+
+      [class|=top] {
+        background: lightblue;
+      }      
+    </style>
+  </head>
+
+  <body>
+    <h3>Css[attribute] Selector</h3>
+  <pre>
+    <code>
+      a[target] {
+        background-color: tomato;
+      }
+    </code>
+  </pre>
+  <a href="http://www.wikipedia.org">wikipedia.org</a>
+  <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+
+
+  <body>
+    <h3>Css[attribute="value"] Selector</h3>
+  <pre>
+    <code>
+      a[target="_blank"] {
+        background-color: yellow;
+      }
+    </code>
+  </pre>
+  <a href="https://www.w3schools.com">w3schools.com</a>
+  <a href="https://www.w3schools.com" target="_blank">w3schools.com</a>
+  <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+
+  <body>
+    <h3>Css[attribut~="value" ] Selector</h3>
+  <pre>
+    <code>
+      [title~="flower"] {
+        border: 5px solid yellow;
+      }
+    </code>
+  </pre>
+
+  <img src="../images/klematis.jpg" title="klematis flower" width="150" height="113">
+  <img src="../images/img_flwr.gif" title="flower" width="224" height="162">
+  <img src="../images/img_tree.gif" title="tree" width="200" height="358">
+
+
+  <h3>Css[attribut|="value" ] Selector</h3>
+  <p>Select all elements with the specified attribute starting with the specified value</p>
+  <pre>
+    <code>
+      [class|="top"] {
+        background: lightblue;
+      }
+    </code>
+  </pre>
+
+  <h1 class="top-header">Welcome</h1>
+  <p class="top-text">Hello world!</p>
+  <p class="topcontent">Are you learning CSS?</p>
+
+  </body>
+</html>

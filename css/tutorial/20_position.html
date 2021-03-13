@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Position</title>
+    <style>
+      div.static{
+        position: static;
+        border: 3px solid #73AD21;
+      }
+      div.relative {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+      }
+      div.fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73AD21;
+      }
+      div.absolute {
+        position: absolute;
+        border: 3px solid #73AD21;
+        top: 100px;
+        right: 300px;
+      }
+      div.sticky {
+        position: sticky;
+        border: 3px solid #73AD21;
+        top: 0;
+      }
+
+      div.overlaping {
+        position: relative;
+      }
+
+      div.overlaping > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.3;
+          z-index: -1;
+        }
+
+      div.container {
+        position: relative;
+    
+      }
+
+      div.container > img{
+        opacity: 0.3;
+        width: 100%;
+        height: auto;
+      }
+
+      .topLeft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      .bottomRight{
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      .center {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body style="height: 1000px;">
+    <h1>Position Property</h1>
+    <p>Different positions:</p>
+    <ul>
+      <li>static</li>
+      <li>relative</li>
+      <li>fixed</li>
+      <li>absolute</li>
+      <li>sticky</li>
+    </ul>
+
+    <h3>Static</h3>
+    <div class="static">This div element has position: static</div>
+    <small>Static elements are not affected by top/left/right/bottom properties</small>
+    <small><b>It's always positioned with the normal page flow</b></small>
+
+    <h3>Relative</h3>
+    <div class="relative">This div element has position: relative</div>
+    <small>Setting top/right/left/bottom properties will cause the element adjust away from its position</small>
+    <small><b>Other elements will not be adjusted to fit into any gap left</b></small>
+
+    <h3>Fixed</h3>
+    <div class="fixed">This div element has position:fixed</div>
+    <small>The top/right/left/bottom properties are positioned relative to the viewport</small>
+    <small><b>The fixed element does not affect the page flow</b></small>
+
+    <h3>Absolute</h3>
+    <div class="absolute">This div element has position:absolute</div>
+    <small>The element is positioned relative to the nearest positioned ancestor and if it has no positioned ancestors, it uses the document body</small>
+
+    <h3>Sticky</h3>
+    <div class="sticky">This div element has position:sticky</div>
+    <small>An element Sticky is positioned based on the users scroll position </small>
+    <small>It will sticky when reach the determined position</small>
+  
+  
+    <h1>Overlaping elements</h1>
+
+    <div class="overlaping">
+      <img src="../images/w3schools.jpg" >
+      <h3>z-index</h3>
+      <p>Because the image has a z-index of -1, it will be plpaced behind the text</p>
+    </div>
+
+    <h1>Positioning text in an image</h1>
+    <div class="container">
+      <img src="../images/img_5terre_wide.jpg">
+      <div class="topLeft"> top left</div>
+      <div class="bottomRight">bottom right</div>
+      <div class="center">center</div>
+    </div>
+
+    <br>
+  </body>
+</html>

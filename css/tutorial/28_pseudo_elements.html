@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Pseudo Elements</title>
+    <style>
+      p::first-line {
+        color: red;
+        font-variant: small-caps;
+      }
+
+      h4::before {
+        content: url('../images/smiley.gif');
+      }
+
+      .marker li::marker {
+        color: red;
+        font-size: 24px;
+      }
+      /* firefox fix */
+      .selection::-moz-selection {
+        color: blue;
+        background: yellow;
+      }
+
+      .selection::selection {
+        color: blue;
+        background: yellow;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <p>Syntax</p>
+    <pre>
+      <code>
+      selector::pseudo-element
+      </code>
+    </pre>
+
+    <h3>first-line</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Quae, obcaecati! Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Dolor quae sunt vitae a eligendi suscipit, enim excepturi consectetur autem exercitationem rem? Numquam accusamus modi commodi veritatis eum eaque cupiditate reprehenderit?
+    </p>
+
+    <p>Properties that can be set to ::first-line</p>
+    <ul>
+      <li>font properties</li>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>text-decoration</li>
+      <li>vertical-align</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>clear</li>
+    </ul>
+
+    <h3>::before</h3>
+    <h4>Example</h4>
+
+    <h3>::marker</h3>
+    <ul class="marker">
+      <li>Hi</li>
+    </ul>
+
+    <h3>::selection</h3>
+    <p class="selection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo perspiciatis non voluptas fugit? Aperiam maxime temporibus, nostrum aut at aliquid odit, facilis nesciunt et numquam, animi ut? Commodi, obcaecati.</p>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Display</title>
+    <style>
+      li { 
+        display: inline; 
+        border: 1px solid black; 
+        padding: 0 1rem;
+      }
+      span { display: block; color: darkgray;}
+      a { display: block;}
+
+      h2 {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Display inline and block</h1>
+    <h3>Inline</h3>
+    <ul>
+      <li>Element one</li>
+      <li>Element two</li>
+      <li>Element three</li>
+    </ul>
+
+    <h3>Block</h3>
+    <p>This is a paragraph <a href="#">with a block link</a> that should not break the line
+       <span>with one span tag that also should not break the line</span> but the display is set to block</p>
+
+
+    <h1>Hide an Element</h1>
+    <h3>Display none</h3>
+    <h2>This is a hidden element.</h2>
+    <p>here is an hidden element.</p>
+
+    <h3>Visibility hidden</h3>
+    <h1 style="visibility: hidden; height: 20px;">This is a hidden element</h1>
+    <p>The visibility hidden affect the layout</p>
+
+    
+  </body>
+</html>

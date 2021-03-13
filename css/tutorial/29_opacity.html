@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Opacity</title>
+    <style>
+      img {
+        height: 200px;
+        opacity: 0.4;
+      }
+
+      img:hover {
+        opacity: 1;
+      }
+
+      div.first {
+        background: rgba(76, 175, 80, 0.3);
+      }
+
+      div.second {
+        background: rgba(76, 175, 80, 0.7);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <img src="../images/img_chania.jpg" alt="">
+    <img src="../images/paris.jpg" alt="">
+    <img src="../images/img_girl.jpg" alt="">
+
+    <h3>Opacity on elements</h3>
+    <p>Opacity when used with elements will affect the text</p>
+    <div style="opacity:0.3;"><p>30% opacity</p></div>
+    <div style="opacity:0.7;"><p>70% opacity</p></div>
+
+    <p>Use alpha to not affect childrens of the element</p>
+    <div class="first"><p>30% opacity</p></div>
+    <div class="second"><p>70% opacity</p></div>
+  </body>
+</html>

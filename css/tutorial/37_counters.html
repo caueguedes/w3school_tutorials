@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Counters</title>
+    <style>
+      body {
+        counter-reset: section;
+      }
+
+      h2 {
+        counter-reset: subsection;
+      }
+
+      h2::before {
+        counter-increment: section;
+        content: "Section " counter(section) ": ";
+      }
+
+      h3::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) ". ";
+      }
+
+      ol {
+        counter-reset: list-section;
+        list-style-type: none;
+      }
+
+      li::before {
+        counter-increment: list-section;
+        content: counters(list-section, ".") " ";
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Automatic numbering with counters</h1>
+    <p>We gonna work with the following properties</p>
+    <pre>
+      counter-reset                     - Creates or resets a counter
+      counter-increment                 - Increments a counter value
+      content                           - Inserts generated content
+      counter() or counters() function  - Adds the value of a counter to an element
+    </pre>
+
+    <h1>Using CSS Counters:</h1>
+    <h2>HTML Tutorial</h2>
+    <h2>CSS Tutorial</h2>
+    <h2>JavaScript Tutorial</h2>
+
+
+    <h1>Nesting Counters</h1>
+
+    <h2>Item subsec</h2>
+    <h3>Subsection</h3>
+    <h3>Item subsec</h3>
+    <h2>Item subsc two</h2>
+    <h3>Subsection</h3>
+
+
+
+    <ol>
+      <li>item</li>
+      <li>item   
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item
+        <ol>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ol>
+        </li>
+        <li>item</li>
+      </ol>
+      </li>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+
+    <ol>
+      <li>item</li>
+      <li>item</li>
+    </ol>
+
+
+  </body>
+</html>

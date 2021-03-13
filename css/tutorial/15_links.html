@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Links</title>
+    <style>
+      a.one:link { color: red;}
+      a.one:visited { color: green;}
+      a.one:hover { color: hotpink;}
+      a.one:active { color: blue;}
+
+      a.two:link { text-decoration: none;}
+      a.two:visited { text-decoration: none;}
+      a.two:hover { text-decoration: underline;}
+      a.two:active { text-decoration: underline;}
+    
+      a.three:link { background-color: yellow;}
+      a.three:visited { background-color: cyan;}
+      a.three:hover { background-color: lightgreen;}
+      a.three:active { background-color: hotpink;}
+
+      a.four:link, a.four:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+      }
+
+      a.four:hover, a.four:active {
+        background-color: palevioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Styling links</h1>
+    <a href="#" class="one">Link style one</a>
+
+    <p>a:hover MUST come after a:link and a:visited</p>
+    <p>a:active MUST come after a:hover</p>
+  
+    <h1>Text decoration links</h1>
+    <a href="#" class="two">Link style one</a>
+
+    <h1>Background color links</h1>
+    <a href="#" class="three">Link style one</a>
+
+    <h1>Buttons links</h1>
+    <a href="#" class="four">Link style one</a>
+
+    <h1>Types of cursors</h1>
+    <p>Mouse over the words to change the cursor.</p>
+    <span style="cursor:auto">auto</span><br>
+    <span style="cursor:crosshair">crosshair</span><br>
+    <span style="cursor:default">default</span><br>
+    <span style="cursor:e-resize">e-resize</span><br>
+    <span style="cursor:help">help</span><br>
+    <span style="cursor:move">move</span><br>
+    <span style="cursor:n-resize">n-resize</span><br>
+    <span style="cursor:ne-resize">ne-resize</span><br>
+    <span style="cursor:nw-resize">nw-resize</span><br>
+    <span style="cursor:pointer">pointer</span><br>
+    <span style="cursor:progress">progress</span><br>
+    <span style="cursor:s-resize">s-resize</span><br>
+    <span style="cursor:se-resize">se-resize</span><br>
+    <span style="cursor:sw-resize">sw-resize</span><br>
+    <span style="cursor:text">text</span><br>
+    <span style="cursor:w-resize">w-resize</span><br>
+    <span style="cursor:wait">wait</span><br>
+  </body>
+</html>
