@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Rounded Corners</title>
+    <style>
+      div {
+        display: inline-block;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+      }
+      #rcorners1 {
+        border-radius: 25px;
+        background: #73AD21;
+      }
+
+      #rcorners2 {
+        border-radius: 25px;
+        border: 1px solid #73AD21;
+      }
+      
+      #rcorners3 {
+        border-radius: 25px;
+        background-image: url('../../images/img_chania.jpg');
+        background-repeat: no-repeat;
+        background-position: left top;
+      }
+
+      /* specific */
+      #scorners1 {
+        border-radius: 15px 30px 50px 5px;
+        background: #73AD21;
+      }
+
+      #scorners2 {
+        border-radius: 15px 30px 50px;
+        background: #73AD21;
+      }
+
+      #scorners3 {
+        border-radius: 15px 30px;
+        background: #73AD21;
+      }
+
+      #scorners4 {
+        border-radius: 15px;
+        background: #73AD21;
+      }
+
+      #ecorners1 {
+        border-radius: 15px / 50px;
+        background: #73AD21;
+      }
+
+      #ecorners2 {
+        border-radius: 50px / 15px;
+        background: #73AD21;
+      }
+
+      #ecorners3 {
+        border-radius: 50%;
+        background: #73AD21;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Border radius</h3>
+    <div id="rcorners1">Rounded corners</div>
+    <div id="rcorners2">Rounded corners</div>
+    <div id="rcorners3">Rounded corners</div>
+
+    <h3>Specific Border radius</h3>
+    <div id="scorners1">Rounded corners</div>
+    <div id="scorners2">Rounded corners</div>
+    <div id="scorners3">Rounded corners</div>
+    <div id="scorners4">Rounded corners</div>
+
+    <h3>Eliptical borders</h3>
+    <div id="ecorners1">Rounded corners</div>
+    <div id="ecorners2">Rounded corners</div>
+    <div id="ecorners3">Rounded corners</div>
+
+  </body>
+</html>

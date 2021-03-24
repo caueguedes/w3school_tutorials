@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Transitions</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 1rem;
+        transition: width 2s;
+      }
+
+      .div1 {
+        transition: width 2s;
+      }
+
+      .div1:hover {
+        width: 300px;
+      }
+
+      .div2 {
+        transition: width 2s, height 4s;
+      }
+
+      .div2:hover {
+        width: 300px;
+        height: 300px;
+      }
+
+      #div1 {transition-timing-function: linear;}
+      #div2 {transition-timing-function: ease;}
+      #div3 {transition-timing-function: ease-in;}
+      #div4 {transition-timing-function: ease-out;}
+      #div5 {transition-timing-function: ease-in-out;}
+
+      :is(#div1, #div2, #div3, #div4, #div5):hover {
+        width: 300px;
+      } 
+      
+      .transition {
+        transition: width 2s, height 2s, transform 2s;
+      }   
+      .transition:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(180deg);
+      }
+
+      .shorthand {
+        transition: width 2s linear 1s;
+      }
+
+      :is(.shorthand, .full):hover {
+        width: 300px;
+      }
+
+      .full {
+        background: red;
+        transition-property: width;
+        transition-duration: 2s;
+        transition-timing-function: linear;
+        transition-delay: 1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in</div><br>
+    <div id="div4">ease-out</div><br>
+    <div id="div5">ease-in-out</div><br>
+
+    <h1>transition transform</h1>
+    <div class="transition"></div><br>
+
+    <h1>transition shorthand</h1>
+    <div class="shorthand"></div><br>
+
+    <h1>transition full</h1>
+    <div class="full"></div><br>
+  </body>
+</html>

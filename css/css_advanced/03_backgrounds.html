@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Backgrounds</title>
+    <style>
+      div {
+        height: 200px;
+        border: 1px solid black;
+      }
+
+      #mult {
+        background-image: url('../../images/img_flwr.gif'), url(../../images/paper.gif);
+        background-position: right bottom, left top;
+        background-repeat: no-repeat, repeat;
+        /* background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat; */
+      }
+
+      #imgsize {
+        background: url('../../images/img_flwr.gif');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      #imgsize-cover {
+        background: url('../../images/img_flwr.gif');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      /* background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat; */
+
+      #full-size {
+        background: url('../../images/img_man.jpg') no-repeat center fixed;
+        background-size: cover;
+      }
+
+      #relative {
+        background: url(../../images/img_man.jpg) no-repeat center;
+        background-size: cover;
+        height: 500px;
+        position: relative;
+      }
+
+
+     
+    </style>
+  </head>
+
+  <body>
+    <h3>Multiple backgrounds</h3>
+    <div id="mult"> 
+      Multiple Backgrounds
+    </div>
+
+    <h3>Background image size</h3>
+    <div id="imgsize">
+      Background image size contain
+    </div>
+
+    <div id="imgsize-cover">
+      Background image size Cover
+    </div>
+
+    <h3>Full size background image</h3>
+    <div id="full-size">
+      Full size background image
+    </div>
+
+    <h3>Relative position</h3>
+    <div id="relative">
+      Relative position
+    </div>
+
+    <h3>Border-box, Content-box, padding-box</h3>
+    <ul>
+      <li>border-box - (default) the background is painted to the outside edge of the border</li>
+      <li>content-box - the background is painted within the content box</li>
+      <li>padding-box - the background is painted to the outside edge of the padding</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Text Effects</title>
+    <style>
+      p {
+        width: 200px;
+        border: 1px solid #000000;
+      }
+      .overflow1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+      .overflow2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .overflow2:hover {
+        overflow: visible;
+      }
+      
+      /* nowrap */
+      .wordwrap1 {
+        word-wrap: break-word;
+      }
+
+      .wordbreak1 {
+        width: 150px;
+        word-break: keep-all;
+      }
+
+      .wordbreak2 {
+        width: 150px;
+        word-break: break-all;
+      }
+
+      .writing1 {
+        writing-mode: horizontal-tb;
+      }
+
+      .writing2 {
+        writing-mode: vertical-rl;
+      }
+
+      .writing3 {
+        writing-mode: sideways-rl;
+      }
+
+      .justify {
+        width: auto;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Text Overflow</h1>
+
+    <p class="overflow1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa saepe voluptates soluta, quasi corrupti eaque tempora facere nesciunt itaque iusto perspiciatis beatae eum a cumque possimus cum alias! Voluptas, aut.</p>
+    <p class="overflow2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa saepe voluptates soluta, quasi corrupti eaque tempora facere nesciunt itaque iusto perspiciatis beatae eum a cumque possimus cum alias! Voluptas, aut.</p>
+
+    <h1>Word Wrap</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, <mark>adipisicingadipisicingadipisicingadipisicing</mark> elit. Culpa saepe voluptates soluta, quasi corrupti eaque tempora facere nesciunt itaque iusto perspiciatis beatae eum a cumque possimus cum alias! Voluptas, aut.</p>
+    <p class="wordwrap1">Lorem ipsum dolor sit amet consectetur, <mark>adipisicingadipisicingadipisicingadipisicing</mark> elit. Culpa saepe voluptates soluta, quasi corrupti eaque tempora facere nesciunt itaque iusto perspiciatis beatae eum a cumque possimus cum alias! Voluptas, aut.</p>
+
+    <h1>Word Breaking</h1>
+    <p class="wordbreak1">This paragraph contains some text. This line will-break-at-hyphens.</p>
+    <p class="wordbreak2">This paragraph contains some text. The lines will break at any character.</p>
+  
+    <h1>Writing Mode</h1>
+    <p class="writing1">This paragraph contains some text. This line will-break-at-hyphens.</p>
+    <p class="writing2">This paragraph contains some text. This line will-break-at-hyphens.</p>
+    <p class="writing3">This paragraph contains some text. This line will-break-at-hyphens.</p>
+
+    <h1>Justify</h1>
+    <p class="justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa saepe voluptates soluta, quasi corrupti eaque tempora facere nesciunt itaque iusto perspiciatis beatae eum a cumque possimus cum alias! Voluptas, aut.</p>
+
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Border Images</title>
+    <style>
+      div {
+        border: 10px solid transparent;
+        padding: 15px;
+      }
+      #iborders1 {
+        border-image: url('../../images/border.png') 30 round;
+      }
+
+      #iborders2 {
+        border-image: url('../../images/border.png') 30 stretch;
+      }
+
+      /* Different Slices */
+      #sborders1 {
+        border-image: url('../../images/border.png') 50 round;
+      }
+      #sborders2 {
+        border-image: url('../../images/border.png') 20% round;
+      }
+      #sborders3 {
+        border-image: url('../../images/border.png') 30% round;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="iborders1">Image borders</div>
+    <div id="iborders2">Image borders</div>
+
+    <h3>Different slices</h3>
+    <div id="sborders1">Image borders</div>
+    <div id="sborders2">Image borders</div>
+    <div id="sborders3">Image borders</div>
+  </body>
+</html>

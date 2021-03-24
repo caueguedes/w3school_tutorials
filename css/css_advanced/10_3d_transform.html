@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>3D Transform</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0, 0.3);
+        margin: 1rem;
+      }
+
+      .rotateY:hover { transform: rotateY(180deg); }
+      .rotateX:hover { transform: rotateX(180deg); }
+      .rotateZ:hover { transform: rotateZ(180deg); }
+     
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="rotateY">Rotate Y</div>
+    
+    <div class="rotateX">Rotate X</div>
+
+    <div class="rotateZ">Rotate Z</div>
+
+    <div class="rotateY">Rotate</div>
+
+    <div class="scale">Scale</div>
+
+    <div class="scaleX">Scale X</div>
+
+    <div class="scaleY">Scale Y</div>
+    
+    <div class="skewX">Skew X</div>
+    
+    <div class="skewY">Skew Y</div>
+    
+    <div class="skew">Skew</div>
+
+    <p>The parameters are as follow: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())    </p>
+    <div class="matrix">matrix</div>
+
+  </body>
+</html>
