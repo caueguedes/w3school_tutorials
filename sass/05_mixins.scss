@@ -1,0 +1,44 @@
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.danger {
+  @include important-text;
+  background-color: green;
+}
+
+// Passing arguments to a mixin
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px);
+}
+
+.myNotes {
+  @include bordered(red, 2px);
+}
+
+// Default Values for mixin
+@mixin bordered($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
+
+.myTips {
+  @include bordered($color: orange);
+}
+
+// Mixing for vendor prefix
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.myBox {
+  @include transform(rotate(20deg));
+}
