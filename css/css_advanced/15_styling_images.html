@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Styling Images</title>
+    <style>
+      .rounded__first { border-radius: 6px; }
+
+      .rounded__second { border-radius: 50%; }
+
+      .thumbnail__first {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+
+      img.thumbnail__second:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+
+      .scale {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+      }
+
+      div.polaroid {
+        width: 600px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+      }
+
+      div.container {
+          text-align: center;
+          padding: 10px 20px;
+      }
+
+      .transparent {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Rounded Images</h2>
+    <img class="rounded__first" src="../../images/paris.jpg">
+    
+    <img class="rounded__second" src="../../images/paris.jpg">
+
+    <h2>Thumbnail images</h2>
+    <img class="thumbnail__first" src="../../images/paris.jpg">
+    
+    <img class="thumbnail__first thumbnail__second" src="../../images/paris.jpg">
+    
+    <h2>Scaling</h2>
+    <img class="scale" src="../../images/img_5terre_wide.jpg">
+
+    <h2>Centering</h2>
+    <img class="center" src="../../images/paris.jpg">
+
+    <h2>Polaroid Cards</h2>
+    <div class="polaroid">
+      <img src="../../images/img_5terre_wide.jpg", width="100%">
+      <div class="container"> 
+        <p>Cinque Terre</p>
+      </div>
+    </div>
+
+    <div class="polaroid">
+      <img src="../../images/lights.jpg", width="100%">
+      <div class="container"> 
+        <p>Northern Lights</p>
+      </div>
+    </div>
+
+    <h2>Transparence</h2>
+    <img class="transparent" src="../../images/paris.jpg" >
+
+  </body>
+</html>

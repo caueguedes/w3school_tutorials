@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Styling Images</title>
+    <style>
+      .container {
+        position: relative;
+      }
+
+      .container img {
+        opacity: 0.5  ;
+      }
+
+      .container .topleft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      .container .topright {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      .container .bottomleft {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      .container .bottomright {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px;
+      }
+
+      .container .centered {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+      }
+
+      /* Filters */
+      .blur { filter: blur(4px); }
+      .brightness { filter: brightness(250%);} 
+      .contrast { filter: contrast(180%); }
+      .grayscale { filter: grayscale(100%); }
+      .huerotate { filter: hue-rotate(180deg) }
+      .invert { filter: invert(100%); }
+      .opacity { filter: opacity(50%); }
+      .saturate { filter: saturate(7); }
+      .sepia { filter: sepia(100%); }
+      .shadow { filter: drop-shadow(8px 8px 10px green)}
+
+
+      .container__overlay {
+        position: relative;
+        width: 30%;
+      }
+
+      .container__overlay img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .container__overlay .fadein {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: .5s ease;
+        background-color:  #008CBA;
+      }
+
+      .container__overlay:hover .fadein {
+        opacity: 1;
+      }
+
+      .container__overlay .text {
+        color: white;
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+
+
+
+
+      /* Image Flip */
+      .flip:hover {
+        transform: scaleX(-1);
+      }
+
+      div.gallery {
+        border: 1px solid #ccc;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h2>Image Text</h2>
+    <div class="container">
+      <img src="../../images/img_5terre_wide.jpg" alt="Cinque Terre" width="100%">
+      <div class="topleft">Top Left</div>
+      <div class="topright">Top Right</div>
+      <div class="bottomleft">Bottom Left</div>
+      <div class="bottomright">Bottom Right</div>
+      <div class="centered">Center</div>
+    </div>
+    
+
+    <h2>Image Filters</h2>
+
+    <img src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="blur" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="brightness" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="contrast" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="grayscale" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="huerotate" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="invert" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="opacity" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="saturate" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="sepia" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+    <img class="shadow" src="../../images/pineapple.jpg" alt="Pineapple" width="300" height="300">
+
+
+    <h2>Image Hover Overlay</h2>
+    <div class="container__overlay">
+      <img src="../../images/img_avatar.png" alt="Avatar" class="image">
+      <div class="fadein">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+
+
+    <div class="container__overlay">
+      <img src="../../images/img_avatar.png" alt="Avatar" class="image">
+      <div class="fadein">
+        <div class="text">Hello World</div>
+      </div>
+    </div>
+
+
+    <h2>Flip Image</h2>
+    <img class="flip" src="../../images/paris.jpg">
+
+
+    <h2>Responsive Image Gallery</h2>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="../../images/img_5terre.jpg">
+          <img src="../../images/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="../../images/img_forest.jpg">
+          <img src="../../images/img_forest.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="../../images/lights.jpg">
+          <img src="../../images/lights.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="../../images/img_mountains.jpg">
+          <img src="../../images/img_mountains.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+
+  </body>
+</html>

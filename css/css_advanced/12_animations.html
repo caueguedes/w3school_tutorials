@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Animations</title>
+    <style>
+      div {
+        margin: 1rem;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-duration: 4s;
+      }
+
+      .example1 { animation-name: example; }
+      @keyframes example {
+        from { background-color: red; }
+        to { background-color: yellow; }
+      }
+
+      .example2 { animation-name: example2; }
+      @keyframes example2 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+      }
+
+      .example3 { 
+        animation-name: example3; 
+        position: relative;  
+      }
+      @keyframes example3 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+      }
+
+      .example4 {
+        animation-name: example3; 
+        position: relative;
+        animation-delay: 2s;
+      }
+
+      .example5 {
+        animation-name: example3; 
+        position: relative;
+        animation-delay: -2s;
+      }
+
+
+      .example6 {
+        animation-name: example3; 
+        position: relative;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+      }
+
+      .example7 {
+        animation-name: example3; 
+        position: relative;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="example1"></div>
+    <div class="example2"></div>
+    <div class="example3"></div>
+
+    <h1>Animantion Delay</h1>
+    <div class="example4"></div>
+    <div class="example5"></div>
+
+    <h1>Iteration Count</h1>
+    <div class="example6"></div>
+    <div class="example7"></div>
+
+    <h1>Direction</h1>
+    <p>Animation-direction can be alternate, reverse and alternate-reverse</p>
+
+    <h1>Animation Timing Function</h1>
+    <p>{animation-timing-function: linear;}</p>
+    <p>{animation-timing-function: ease;}</p>
+    <p>{animation-timing-function: ease-in;}</p>
+    <p>{animation-timing-function: ease-out;}</p>
+    <p>{animation-timing-function: ease-in-out;}</p>
+
+    <h1>ShortHand</h1>
+    <p>animation: example 5s linear 2s infinite alternate;</p>
+  </body>
+</html>

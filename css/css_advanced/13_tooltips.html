@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Tool tips</title>
+    <style>
+      body { text-align: center;}
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        
+        position: absolute;
+        z-index: 1;
+      }
+
+      
+      /* Align Tooltips */
+      .tooltip:nth-of-type(2):hover .tooltiptext {
+        top: -5px;
+        left: 105%;
+      }
+
+      /* Align Left */
+      .tooltip:nth-of-type(3):hover .tooltiptext {
+        top: -5px;
+        right: 105%;
+      }
+
+      /* Align Top */
+      .tooltip:nth-of-type(4):hover .tooltiptext {
+        width: 120px;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      /* Align Bottom */
+      .tooltip:nth-of-type(5):hover .tooltiptext {
+        width: 120px;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+
+      /* arrows bottom */
+      .tooltip:nth-of-type(6) .tooltiptext {
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip:nth-of-type(6) .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+
+
+      /* arrows top */
+      .tooltip:nth-of-type(7) .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+
+      .tooltip:nth-of-type(7) .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+
+
+
+
+
+
+      /* arrows bottom */
+      .tooltip:nth-of-type(6) .tooltiptext {
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip:nth-of-type(6) .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Basic Tooltips</h1>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+
+    <h1>Align Tooltips</h1>
+    <h3>Right</h3>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+    
+    <h3>Left</h3>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+    
+    <h3>Top</h3>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+
+    <h3>Bottom</h3>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">5Tooltip text</span>
+    </div>
+  </body>
+</html>

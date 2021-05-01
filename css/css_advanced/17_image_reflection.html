@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Image Reflection</title>
+    <style>
+      .container { display: inline-block; }
+      .bellow {
+        -webkit-box-reflect: below;
+      }
+
+      .below__after-space {
+        -webkit-box-reflect: below 30px;
+      }
+
+      .right {
+        -webkit-box-reflect: right;
+      }
+
+      .gradient {
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Reflection below the image</h2>
+      <img class="bellow" src="../../images/img_tree.gif">
+    </div>
+    
+
+    <div class="container">
+      <h2></h2>
+      <img class="below__after-space" src="../../images/img_tree.gif">
+    </div>
+
+    <div class="container">
+      <h2></h2>
+      <img class="gradient" src="../../images/img_tree.gif">
+    </div>
+
+    <div class="container">
+      <h2></h2>
+      <img class="right" src="../../images/img_tree.gif">
+    </div>
+    
+  </body>
+</html>
