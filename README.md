@@ -1,6 +1,6 @@
 # W3School Tutorials
 
-Here is my execution of the tutorials on the site
+Here is my execution of the tutorials from the site
 [w3school](https://www.w3schools.com/)
 
 ## Accomplished tutorials
