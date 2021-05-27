@@ -15,3 +15,8 @@ exercise folders:
 - html
 - css
 - javascript 
+
+media used in the exercises:
+- media_audio
+- media_movies
+- images
